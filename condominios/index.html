@@ -4,12 +4,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Inmobiliaria Inteligente</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="icon" type="image/png" href="./img/logo.png"/>
+    <script src="https://kit.fontawesome.com/15bb13ea67.js" crossorigin="anonymous"></script>
 </head>
-<body>
-<div class="header finisher-header" style="width: 100%; height: 100%;">
+<body>    
+<div class="header finisher-header" style="width: 100%; height: 100px;">
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#somos">Quienes Somos</a>
+                <a href="#red-neuronal">Nuestra Neurona</a>
+                <a href="#contacto">Contactanos</a>
+            </nav>
+        </div>
+    </header>
+</div>
+
+<main>
+    <section class="section1">
+        <div class="imagen">
+        <div id="layer"></div>
+        </div>
+    </section>
+
+    <section class="section2">
+        <h1>Los <span>Precios</span> de tus sueños.</h1>
+
+        <p>¿Estás buscando tu condominio ideal pero no sabes cuánto deberías gastar? ¡Nuestra red neuronal te puede ayudar! Con solo unos clics, puedes seleccionar los parámetros que más te importan. ¡Prueba ahora nuestra herramienta gratuita y descubre cómo podemos ayudarte a encontrar el condominio perfecto al precio perfecto!</p>
+    
+    </section>
+</main>
+
+<section id="somos">
+    <div class="container">
+        <div class="img-container"></div>
+        <div class="texto">
+        <h2>Somos <span class="color-acento">Inmobiliaria Inteligente</span></h2>
+        <p>Somos una empresa que se dedica a brindar soluciones innovadoras en el mercado inmobiliario. Nos enfocamos en el uso de tecnologías avanzadas, como una red neuronal, para ofrecer a nuestros clientes precios precisos y actualizados de condominios. Nos esforzamos por brindar una amplia variedad de opciones de condominios en diferentes ubicaciones, con características únicas y adaptadas a los diferentes presupuestos y necesidades de nuestros clientes.</p>
+        </div>
+    </div>
+</section>
+
+<section id="red-neuronal">
     <div class="container">
         <div class="row">
             <div class="col-12 col-md-6 offset-md-3">
@@ -18,7 +57,7 @@
                         <h4 class="text-center">Calcular Precio de Condominios</h4>
                     </div>
                 </div>
-
+    
                 <div class="card mt-2 shadow">
                     <div class="card-body">
                         <div class="row">
@@ -26,17 +65,17 @@
                                 <label>Metros Cuadrados</label>
                                 <input type="number" class="form-control mb-3" id="m2">
                             </div>
-
+    
                             <div class="col-lg-6">
                                 <label>Nº de Habitaciones</label>
                                 <input type="number" class="form-control mb-3" id="hab">
                             </div>
-
+    
                             <div class="col-lg-6">
                                 <label>Nº de Planta</label>
                                 <input type="number" class="form-control mb-3" id="planta">
                             </div>
-
+    
                             <div class="col-lg-6">
                                 <label>Nº de Parqueos</label>
                                 <input type="number" class="form-control mb-3" id="parqueo">
@@ -50,7 +89,7 @@
                                     <option value=1>Si</option>
                                 </select>
                             </div>
-
+    
                             <div class="col-lg-6">
                                 <label>¿Es Exterior?</label>
                                 <select id="ext" class="form-control mb-3">
@@ -59,7 +98,7 @@
                                     <option value=1>Si</option>
                                 </select>
                             </div>
-
+    
                             <div class="col-lg-6">
                             <label>Estado</label>
                             <select id="est" class="form-control mb-3">
@@ -69,7 +108,7 @@
                                 <option value=2>Nuevo</option>
                             </select>
                             </div>
-
+    
                             <div class="col-lg-6">
                             <label>¿Es Céntrico?</label>
                             <select id="cent" class="form-control mb-3">
@@ -78,7 +117,7 @@
                                 <option value=1>Si</option>
                             </select>
                             </div>
-
+    
                             <div class="col-lg-6">
                             <label>¿Tiene Area Verde?</label>
                             <select id="area" class="form-control mb-3">
@@ -87,7 +126,7 @@
                                 <option value=1>Si</option>
                             </select>
                             </div>
-
+    
                             <div class="col-lg-6">
                                 <label>¿Tiene Gimnasio?</label>
                                 <select id="gimnasio" class="form-control mb-3">
@@ -96,7 +135,7 @@
                                     <option value=1>Si</option>
                                 </select>
                             </div>
-
+    
                             <div class="col-lg-6">
                                 <label>¿Tiene Piscina?</label>
                                 <select id="picsina" class="form-control mb-3">
@@ -105,7 +144,7 @@
                                     <option value=1>Si</option>
                                 </select>
                             </div>
-
+    
                             <div class="col-lg-6">
                                 <label>¿Tiene Seguridad?</label>
                                 <select id="seguridad" class="form-control mb-3">
@@ -114,7 +153,7 @@
                                     <option value=1>Si</option>
                                 </select>
                             </div>
-
+    
                             <div class="col-lg-12">
                             <label>¿Cuenta con Mantenimiento?</label>
                             <select id="mantenimiento" class="form-control mb-3">
@@ -133,9 +172,17 @@
             </div>
         </div>
     </div>
-</div>
+</section>
+
+<section id="contacto">
+    <ul>
+        <li><a href="#"> <i class="fa-brands fa-instagram"></i></a></li>
+        <li><a href="#"> <i class="fa-brands fa-whatsapp"></i></a></li>
+        <li><a href="#"> <i class="fa-brands fa-twitter"></i></a></li>
+    </ul>
+</section>
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
-<script src="./finisher-header.es5.min.js" type="text/javascript"></script>
-<script src="./index.js"></script>
+<script src="./js/finisher-header.es5.min.js" type="text/javascript"></script>
+<script src="./js/index.js"></script>
 </body>
 </html>

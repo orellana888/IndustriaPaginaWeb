@@ -56,7 +56,7 @@ new FinisherHeader({
           var tensor = tf.tensor2d([[0, parseInt(m2), parseInt(hab), parseInt(planta), parseInt(ascensor), parseInt(ext), parseInt(est), parseInt(cent)]])
           var prediccion = modelo.predict(tensor).dataSync();
           prediccion = Math.round(prediccion, 2)
-          document.getElementById("resultado").innerHTML = "Precio: " + prediccion + "€/mes";
+          document.getElementById("resultado").innerHTML = "Precio: " + prediccion + "$/mes";
       }else{
           document.getElementById("resultado").innerHTML = "Intenta de nuevo en un rato...";
       }
