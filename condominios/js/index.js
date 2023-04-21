@@ -61,3 +61,21 @@ new FinisherHeader({
           document.getElementById("resultado").innerHTML = "Intenta de nuevo en un rato...";
       }
   }
+
+    function reiniciarFormulario() {
+      document.getElementById("m2").value = "";
+      document.getElementById("hab").value = "";
+      document.getElementById("planta").value = "";
+      document.getElementById("parqueo").value = "";
+      document.getElementById("ascensor").selectedIndex = 0;
+      document.getElementById("ext").selectedIndex = 0;
+      document.getElementById("est").selectedIndex = 0;
+      document.getElementById("cent").selectedIndex = 0;
+      document.getElementById("area").selectedIndex = 0;
+      document.getElementById("gimnasio").selectedIndex = 0;
+      document.getElementById("picsina").selectedIndex = 0;
+      document.getElementById("seguridad").selectedIndex = 0;
+      document.getElementById("mantenimiento").selectedIndex = 0;
+      document.getElementById("resultado").innerHTML = "";
+    }
+  
