@@ -44,16 +44,24 @@ new FinisherHeader({
   const btn = document.getElementById("btn");
 
   btn.onclick = () =>{
+      var ciudad = document.getElementById('ciudad').value;
+      var ban  = document.getElementById('ban').value;
       var m2 = document.getElementById('m2').value;
       var hab = document.getElementById('hab').value;
       var planta = document.getElementById('planta').value;
       var ascensor = document.getElementById('ascensor').value;
       var ext = document.getElementById('ext').value;
-      var est = document.getElementById('est').value;
+      var amb = document.getElementById('amb').value;
       var cent = document.getElementById('cent').value;
-
+      var verde = document.getElementById('verde').value;
+      var gim = document.getElementById('gimnasio').value;
+      var park = document.getElementById('parqueo').value;
+      var pisc = document.getElementById('piscina').value;
+      var sec =  document.getElementById('seguridad').value
+      
+      
       if(modelo != null){
-          var tensor = tf.tensor2d([[0, parseInt(m2), parseInt(hab), parseInt(planta), parseInt(ascensor), parseInt(ext), parseInt(est), parseInt(cent)]])
+          var tensor = tf.tensor2d([[parseInt(ciudad), parseInt(m2), parseInt(hab), parseFloat(ban),parseInt(planta), parseInt(ascensor), parseInt(ext), parseInt(amb), parseInt(cent),parseInt(verde),parseInt(gim),parseInt(park),parseInt(pisc),parseInt(sec)]]);
           var prediccion = modelo.predict(tensor).dataSync();
           prediccion = Math.round(prediccion, 2)
           document.getElementById("resultado").innerHTML = "Precio: " + prediccion + "$/mes";

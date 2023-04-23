@@ -15,7 +15,7 @@
     <header>
         <div class="container">
             <nav>
-                <a href="#somos">Quienes Somos</a>
+                <a href="#somos">Inicio</a>
                 <a href="#red-neuronal">Nuestra Neurona</a>
                 <a href="#contacto">Contactanos</a>
             </nav>
@@ -31,9 +31,10 @@
     </section>
 
     <section class="section2">
-        <h1>Los <span>Precios</span> de tus sueños.</h1>
+        <h1>¿ Qué se considera un <span>condominio</span> ?</h1>
 
-        <p>¿Estás buscando tu condominio ideal pero no sabes cuánto deberías gastar? ¡Nuestra red neuronal te puede ayudar! Con solo unos clics, puedes seleccionar los parámetros que más te importan. ¡Prueba ahora nuestra herramienta gratuita y descubre cómo podemos ayudarte a encontrar el condominio perfecto al precio perfecto!</p>
+        <p>
+            Un tipo de propiedad inmobiliaria en la que varias personas comparten la propiedad de un edificio o complejo de edificios. Cada propietario es dueño de una unidad individual dentro del condominio y comparte la propiedad común, como áreas comunes, servicios y facilidades, con los demás propietarios. Los condominios son comúnmente utilizados como viviendas, aunque también pueden ser utilizados para fines comerciales o turísticos. </p>
     
     </section>
 </main>
@@ -42,8 +43,12 @@
     <div class="container">
         <div class="img-container"></div>
         <div class="texto">
-        <h2>Somos <span class="color-acento">Inmobiliaria Inteligente</span></h2>
-        <p>Somos una empresa que se dedica a brindar soluciones innovadoras en el mercado inmobiliario. Nos enfocamos en el uso de tecnologías avanzadas, como una red neuronal, para ofrecer a nuestros clientes precios precisos y actualizados de condominios. Nos esforzamos por brindar una amplia variedad de opciones de condominios en diferentes ubicaciones, con características únicas y adaptadas a los diferentes presupuestos y necesidades de nuestros clientes.</p>
+        <h2>¿ Qué <span class="color-acento">parametros</span> utilizamos ?</h2>
+        <p>Un condominio puede tener múltiples características. Nuestra red neuronal utiliza 14 parámetros, sin embargo, se podrían considerar hasta 30 características para el cálculo de un precio razonable.<br> Los parámetros principales son el área, el número de habitaciones, la cantidad de baños, si cuenta con ascensor, salida a exteriores, si se encuentra amueblado, es céntrico, cantidad de espacios para estacionamiento y seguridad.
+            <br>
+            Además, se consideran aspectos adicionales, como si cuenta con áreas verdes o sociales, gimnasio y piscina.
+
+        </p>
         </div>
     </div>
 </section>
@@ -61,6 +66,14 @@
                 <div class="card mt-2 shadow">
                     <div class="card-body">
                         <div class="row">
+                            <div class="col-lg-12">
+                                <label>Ciudad</label>
+                                <select id="ciudad" class="form-control mb-3">
+                                    <option disabled selected>Elige una opción...</option>
+                                    <option value=0>Tegucigalpa</option>
+                                    <option value=1>San Pedro Sula</option>
+                                </select>
+                            </div>
                             <div class="col-lg-6">
                                 <label>Metros Cuadrados</label>
                                 <input type="number" class="form-control mb-3" id="m2">
@@ -70,7 +83,10 @@
                                 <label>Nº de Habitaciones</label>
                                 <input type="number" class="form-control mb-3" id="hab">
                             </div>
-    
+                            <div class="col-lg-6">
+                                <label>Nº de Baños</label>
+                                <input type="number" class="form-control mb-3" id="ban">
+                            </div>
                             <div class="col-lg-6">
                                 <label>Nº de Planta</label>
                                 <input type="number" class="form-control mb-3" id="planta">
@@ -100,12 +116,11 @@
                             </div>
     
                             <div class="col-lg-6">
-                            <label>Estado</label>
-                            <select id="est" class="form-control mb-3">
+                            <label>¿Es amueblado?</label>
+                            <select id="amb" class="form-control mb-3">
                                 <option disabled selected>Elige una opción...</option>
-                                <option value=0>No rehabilitado</option>
-                                <option value=1>Rehabilitado</option>
-                                <option value=2>Nuevo</option>
+                                <option value=0>No</option>
+                                <option value=1>Si</option>
                             </select>
                             </div>
     
@@ -120,7 +135,7 @@
     
                             <div class="col-lg-6">
                             <label>¿Tiene Area Verde?</label>
-                            <select id="area" class="form-control mb-3">
+                            <select id="verde" class="form-control mb-3">
                                 <option disabled selected>Elige una opción...</option>
                                 <option value=0>No</option>
                                 <option value=1>Si</option>
@@ -138,7 +153,7 @@
     
                             <div class="col-lg-6">
                                 <label>¿Tiene Piscina?</label>
-                                <select id="picsina" class="form-control mb-3">
+                                <select id="piscina" class="form-control mb-3">
                                     <option disabled selected>Elige una opción...</option>
                                     <option value=0>No</option>
                                     <option value=1>Si</option>
@@ -154,14 +169,7 @@
                                 </select>
                             </div>
     
-                            <div class="col-lg-12">
-                            <label>¿Cuenta con Mantenimiento?</label>
-                            <select id="mantenimiento" class="form-control mb-3">
-                                <option disabled selected>Elige una opción...</option>
-                                <option value=0>No</option>
-                                <option value=1>Si</option>
-                            </select>
-                            </div>
+                            
                         </div>
                         <div class="d-flex">
                             <button class="btn btn-primary mt-4" type="button" id="btn">Calcular precio</button>
