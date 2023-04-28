@@ -9,6 +9,12 @@
     --SlightlytransparentP: hsla(0, 0%, 100%, 0.75);
     --SlightlytransparentS: hsla(0, 0%, 100%, 0.6);
     --Layer: rgba(110,30,160,0.7);
+    --Cyan: hsl(179, 62%, 43%);
+    --BrightYellow: hsl(71, 73%, 54%);
+    --LightGray: hsl(204, 43%, 93%);
+    --GrayishBlue: hsl(218, 22%, 67%);
+    --cyanclaro: hsl(179, 62%, 47%);
+    --color-en-medio: hsl(179, 62%, 45%);
 }
 
 body{
@@ -130,6 +136,117 @@ ul li a::before {
     transition: 0.5s ease-in-out;
 }
 
+/*-----------<375px------------*/
+.main_container{
+    background-color: white; 
+    /* var(--Darkdesaturatedblue); */
+    width: 313px;
+    height: 1830px;
+    margin: 70px auto 70px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.our_comunity{
+    padding: 8px 24px 24px 24px;
+    height: 1370px;
+    box-sizing: border-box;
+}
+
+.suscripcion{
+    background-color: var(--Cyan);
+    padding: 12px 24px 24px 24px;
+    height: 230px;
+    box-sizing: border-box;
+    color: white;
+}
+
+.why_us{
+    background-color: var(--cyanclaro);
+    padding: 8px 24px 24px 24px;
+    height: 230px;
+    box-sizing: border-box;
+    color: var(--LightGray);
+}
+
+.suscripcion h2{
+    font-size: 1em;
+    margin-bottom: 18px;
+
+}
+
+.precio{
+    font-size: 2em;
+    font-weight: 700;
+    color: white;
+
+}
+.pago{
+    font-size: 2em;
+    font-weight: 700;
+    color: white;
+}
+
+button{
+    margin-top: 14px;
+    background-color: var(--BrightYellow);
+    border-radius: 5px;
+    width: 100%;
+    height: 48px;
+    border-style: none;
+    color: var(--LightGray);
+    font-size: 16px;
+    font-weight: 700;
+    
+}
+
+.why_us h2{
+    font-size: 18px;
+
+}
+
+.why_us ul li{
+    list-style: none;
+    margin-left: -40px;
+    font-size: 0.85em;
+    line-height: 20px;
+    font-weight: 300;
+}
+
+
+
+@media screen and (min-width: 680px){
+    .main_container{
+        width: 836px;
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 160px auto 150px;
+    }
+
+    .our_comunity{
+        grid-column: 1/3;
+        padding: 20px 35px;
+        height: auto;
+        margin-bottom: 50px;
+    }
+
+    .suscripcion{
+        padding: 20px 40px;
+        height: 258px;
+    }
+    .suscripcion h2{
+        font-size: 1.1em;
+
+    }
+    .suscripcion p{
+        font-size: 0.95em;
+    }
+    .why_us{
+        padding: 20px 40px;
+        height: 258px;
+    }
+}
 
 
 @media only screen and (min-width: 1200px){
@@ -175,6 +292,7 @@ ul li a::before {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        background-color: var(--Darkdesaturatedblue);
     }
 
     #somos h2{

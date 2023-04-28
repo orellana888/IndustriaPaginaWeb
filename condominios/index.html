@@ -16,7 +16,7 @@
         <div class="container">
             <nav>
                 <a href="#somos">Inicio</a>
-                <a href="#red-neuronal">Nuestra Neurona</a>
+                <a href="#neurona">Nuestra Neurona</a>
                 <a href="#contacto">Contactanos</a>
             </nav>
         </div>
@@ -47,16 +47,16 @@
         <p>Un condominio puede tener múltiples características. Nuestra red neuronal utiliza 14 parámetros, sin embargo, se podrían considerar hasta 30 características para el cálculo de un precio razonable.<br> Los parámetros principales son el área, el número de habitaciones, la cantidad de baños, si cuenta con ascensor, salida a exteriores, si se encuentra amueblado, es céntrico, cantidad de espacios para estacionamiento y seguridad.
             <br>
             Además, se consideran aspectos adicionales, como si cuenta con áreas verdes o sociales, gimnasio y piscina.
-
         </p>
         </div>
     </div>
 </section>
 
-<section id="red-neuronal">
-    <div class="container">
+<main class="main_container" id="neurona">
+    <section class="our_comunity">
+      <div class="container">
         <div class="row">
-            <div class="col-12 col-md-6 offset-md-3">
+            <div class="col-md-12">
                 <div class="card mt-5 shadow">
                     <div class="card-body">
                         <h4 class="text-center">Calcular Precio de Condominios</h4>
@@ -168,20 +168,29 @@
                                     <option value=1>Si</option>
                                 </select>
                             </div>
-    
-                            
-                        </div>
-                        <div class="d-flex">
-                            <button class="btn btn-primary mt-4" type="button" id="btn">Calcular precio</button>
-                            <h5 id="resultado" class="mx-5 mt-4" style="color: green;"></h5>
-                            <button class="btn btn-success mt-4 mr-5" type="button" onclick="reiniciarFormulario()">Volver a Calcular</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</section>
+    </section>
+
+    <section class="suscripcion">
+     <h2> Monto de: </h2>
+      <span class="precio">&dollar;</span>
+      <span class="pago" id="resultado"></span>
+      <button class="btn btn-primary mt-4" type="button" id="btn">Calcular precio</button>
+      <button class="btn btn-success mt-2 mr-5" type="button" onclick="reiniciarFormulario()">Volver a Calcular</button>
+    </section>
+
+    <section class="why_us">
+      <h2>Por que Nosotros</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam laudantium sed laborum, suscipit perspiciatis animi hic eos quas aut architecto fuga inventore quidem officiis maxime sint
+      </p>
+    </section>
+  </main>
 
 <section id="contacto">
     <ul>
@@ -192,6 +201,7 @@
 </section>
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
 <script src="./js/finisher-header.es5.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="./js/index.js"></script>
 </body>
 </html>
