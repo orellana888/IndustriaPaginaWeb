@@ -76,27 +76,29 @@
                             </div>
                             <div class="col-lg-6">
                                 <label>Metros Cuadrados</label>
-                                <input type="number" class="form-control mb-3" id="m2">
-                            </div>
-    
-                            <div class="col-lg-6">
-                                <label>Nº de Habitaciones</label>
-                                <input type="number" class="form-control mb-3" id="hab">
+                                <input type="number" class="form-control mb-3" id="m2" onblur="validarNumero('m2')">
+                                <span class="text-danger" id="mensaje-error-m2" style="display: none;">El número debe ser mayor que cero.</span>
                             </div>
                             <div class="col-lg-6">
-                                <label>Nº de Baños</label>
-                                <input type="number" class="form-control mb-3" id="ban">
+                                <label>Habitaciones</label>
+                                <input type="number" class="form-control mb-3" id="hab" onblur="validarNumero('hab')">
+                                <span class="text-danger" id="mensaje-error-hab" style="display: none;">El número debe ser mayor que cero.</span>
                             </div>
                             <div class="col-lg-6">
-                                <label>Nº de Planta</label>
-                                <input type="number" class="form-control mb-3" id="planta">
+                                <label>Baños</label>
+                                <input type="number" class="form-control mb-3" id="ban" onblur="validarNumero('ban')">
+                                <span class="text-danger" id="mensaje-error-ban" style="display: none;">El número debe ser mayor que cero.</span>
                             </div>
-    
                             <div class="col-lg-6">
-                                <label>Nº de Parqueos</label>
-                                <input type="number" class="form-control mb-3" id="parqueo">
+                                <label>Plantas</label>
+                                <input type="number" class="form-control mb-3" id="planta" onblur="validarNumero('planta')">
+                                <span class="text-danger" id="mensaje-error-planta" style="display: none;">El número debe ser mayor que cero.</span>
                             </div>
-                            
+                            <div class="col-lg-6">
+                                <label>Parqueos</label>
+                                <input type="number" class="form-control mb-3" id="parqueo" onblur="validarNumero('parqueo')">
+                                <span class="text-danger" id="mensaje-error-parqueo" style="display: none;">El número debe ser mayor que cero.</span>
+                            </div>
                             <div class="col-lg-6">
                                 <label>¿Cuenta con Ascensor?</label>
                                 <select id="ascensor" class="form-control mb-3">

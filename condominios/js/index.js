@@ -66,7 +66,7 @@ new FinisherHeader({
           prediccion = Math.round(prediccion, 2)
           document.getElementById("resultado").innerHTML = prediccion + " por mes.";
       }else{
-          document.getElementById("resultado").innerHTML = "Intenta de nuevo en un rato...";
+          document.getElementById("resultado").innerHTML = "Error.";
       }
   }
 
@@ -120,3 +120,13 @@ function reiniciarFormulario() {
   });
 }
   
+function validarNumero(idCampo) {
+  var campo = document.getElementById(idCampo);
+  var mensajeError = document.getElementById("mensaje-error-" + idCampo);
+  if (campo.value <= 0) {
+    mensajeError.style.display = "inline";
+    campo.value = 0;
+  } else {
+    mensajeError.style.display = "none";
+  }
+}
