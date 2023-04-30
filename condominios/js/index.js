@@ -138,3 +138,37 @@ function validarNumero(idCampo) {
   }
 }
 
+function validarLongitud(id) {
+  var campo = document.getElementById(id);
+  if (campo.value.length > 4) {
+    campo.value = campo.value.substring(0, 4);
+  }
+}
+
+function validarLongitud2(id) {
+  var campo = document.getElementById(id);
+  if (campo.value.length > 2) {
+    campo.value = campo.value.substring(0, 2);
+  }
+}
+
+function validarLongitud3(id) {
+  var campo = document.getElementById(id);
+  if (campo.value.length > 2) {
+    campo.value = campo.value.substring(0, 2);
+  }
+}
+
+function validarLongitud4(id) {
+  var campo = document.getElementById(id);
+  if (campo.value.length > 2) {
+    campo.value = campo.value.substring(0, 2);
+  }
+}
+
+function validarLongitud5(id) {
+  var campo = document.getElementById(id);
+  if (campo.value.length > 2) {
+    campo.value = campo.value.substring(0, 2);
+  }
+}
