@@ -34,7 +34,6 @@ new FinisherHeader({
   ]
 });
   var modelo = null;
-  //Cargamos el modelo entrenado
   (async() =>{
       console.log("Cargando el modelo...");
       modelo = await tf.loadLayersModel("model.json");
@@ -59,7 +58,15 @@ new FinisherHeader({
       var pisc = document.getElementById('piscina').value;
       var sec =  document.getElementById('seguridad').value
       
-      
+      if(m2.length == 0 || hab.length == 0 || ban.length == 0 || planta.length == 0 || parqueo.length == 0 ||
+        ascensor === "Elige una opción..." || ext === "Elige una opción..." ||
+        amb === "Elige una opción..." || cent === "Elige una opción..." ||
+        verde === "Elige una opción..." || gimnasio === "Elige una opción..." ||
+        piscina === "Elige una opción..." || seguridad === "Elige una opción..." || ciudad === "Elige una opción...")
+        {
+        return Swal.fire("Advertencia", "Llene los campos vacios","warning");
+        } else {
+        
       if(modelo != null){
           var tensor = tf.tensor2d([[parseInt(ciudad), parseInt(m2), parseInt(hab), parseFloat(ban),parseInt(planta), parseInt(ascensor), parseInt(ext), parseInt(amb), parseInt(cent),parseInt(verde),parseInt(gim),parseInt(park),parseInt(pisc),parseInt(sec)]]);
           var prediccion = modelo.predict(tensor).dataSync();
@@ -68,6 +75,7 @@ new FinisherHeader({
       }else{
           document.getElementById("resultado").innerHTML = "Error.";
       }
+    }
   }
 
 function reiniciarFormulario() {
@@ -80,7 +88,7 @@ function reiniciarFormulario() {
   });
 
   swalWithBootstrapButtons.fire({
-    title: '¿Quiere reiniciar el calculo?',
+    title: '¿Quiere reiniciar el formulario?',
     text: "Esta acción restablecerá el formulario!",
     icon: 'warning',
     showCancelButton: true,
@@ -123,10 +131,10 @@ function reiniciarFormulario() {
 function validarNumero(idCampo) {
   var campo = document.getElementById(idCampo);
   var mensajeError = document.getElementById("mensaje-error-" + idCampo);
-  if (campo.value <= 0) {
+  if (campo.value !== "" && campo.value <= 0) {
     mensajeError.style.display = "inline";
-    campo.value = 0;
   } else {
     mensajeError.style.display = "none";
   }
 }
+
