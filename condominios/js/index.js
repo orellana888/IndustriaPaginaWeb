@@ -58,22 +58,25 @@ new FinisherHeader({
       var pisc = document.getElementById('piscina').value;
       var sec =  document.getElementById('seguridad').value
       
-      if(m2.length == 0 || hab.length == 0 || ban.length == 0 || planta.length == 0 || parqueo.length == 0 ||
-        ascensor === "Elige una opción..." || ext === "Elige una opción..." ||
-        amb === "Elige una opción..." || cent === "Elige una opción..." ||
-        verde === "Elige una opción..." || gimnasio === "Elige una opción..." ||
-        piscina === "Elige una opción..." || seguridad === "Elige una opción..." || ciudad === "Elige una opción...")
-        {
+    
+      if(m2.length == 0 || hab.length == 0 || ban.length == 0 || planta.length == 0 || park.length == 0 ||
+      ascensor === "Elige una opción..." || ext === "Elige una opción..." ||
+      amb === "Elige una opción..." || cent === "Elige una opción..." ||
+      verde === "Elige una opción..." || gim === "Elige una opción..." ||
+      pisc === "Elige una opción..." || sec === "Elige una opción..." || ciudad === "Elige una opción..."){
         return Swal.fire("Advertencia", "Llene los campos vacios","warning");
-        } else {
-        
-      if(modelo != null){
-          var tensor = tf.tensor2d([[parseInt(ciudad), parseInt(m2), parseInt(hab), parseFloat(ban),parseInt(planta), parseInt(ascensor), parseInt(ext), parseInt(amb), parseInt(cent),parseInt(verde),parseInt(gim),parseInt(park),parseInt(pisc),parseInt(sec)]]);
-          var prediccion = modelo.predict(tensor).dataSync();
-          prediccion = Math.round(prediccion, 2)
-          document.getElementById("resultado").innerHTML = prediccion + " por mes.";
+      }else{ 
+      if(parseInt(m2) < 1 || parseInt(hab) < 1 || parseInt(ban) < 1 || parseInt(planta) < 1 || parseInt(park) < 1){
+        return Swal.fire("Error", "No se aceptan valores menores a 0.", "error");
       }else{
-          document.getElementById("resultado").innerHTML = "Error.";
+        if(modelo != null){
+            var tensor = tf.tensor2d([[parseInt(ciudad), parseInt(m2), parseInt(hab), parseFloat(ban),parseInt(planta), parseInt(ascensor), parseInt(ext), parseInt(amb), parseInt(cent),parseInt(verde),parseInt(gim),parseInt(park),parseInt(pisc),parseInt(sec)]]);
+            var prediccion = modelo.predict(tensor).dataSync();
+            prediccion = Math.round(prediccion, 2)
+            document.getElementById("resultado").innerHTML = prediccion + " por mes.";
+        }else{
+            document.getElementById("resultado").innerHTML = "Error.";
+        }
       }
     }
   }
