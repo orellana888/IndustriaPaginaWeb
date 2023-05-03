@@ -70,7 +70,8 @@ new FinisherHeader({
         return Swal.fire("Error", "No se aceptan valores menores a 0.", "error");
       }else{
         if(modelo != null){
-            var tensor = tf.tensor2d([[parseInt(ciudad), parseInt(m2), parseInt(hab), parseFloat(ban),parseInt(planta), parseInt(ascensor), parseInt(ext), parseInt(amb), parseInt(cent),parseInt(verde),parseInt(gim),parseInt(park),parseInt(pisc),parseInt(sec)]]);
+            var tensor = tf.tensor2d([[parseInt(ciudad), parseInt(m2), parseInt(hab), parseFloat(ban),parseInt(planta), parseInt(ascensor),
+               parseInt(ext), parseInt(amb), parseInt(cent),parseInt(verde),parseInt(gim),parseInt(park),parseInt(pisc),parseInt(sec)]]);
             var prediccion = modelo.predict(tensor).dataSync();
             prediccion = Math.round(prediccion, 2)
             document.getElementById("resultado").innerHTML = prediccion + " por mes.";
