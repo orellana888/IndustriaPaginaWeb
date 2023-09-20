@@ -36,7 +36,7 @@ new FinisherHeader({
   var modelo = null;
   (async() =>{
       console.log("Cargando el modelo...");
-      modelo = await tf.loadLayersModel("model.json");
+      modelo = await tf.loadLayersModel("./model.json");
       console.log("Modelo cargado!");
   })();
 
